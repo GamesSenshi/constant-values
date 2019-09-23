@@ -1,24 +1,92 @@
 {
-  "name": "@gamesenshi/constant-values",
-  "version": "1.0.0",
-  "description": "constant values for game senshi project",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GamesSenshi/constant-values.git"
-  },
-  "keywords": [
-    "game",
-    "senshi",
-    "constant"
-  ],
-  "author": "Game Senshi",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/GamesSenshi/constant-values/issues"
-  },
-  "homepage": "https://github.com/GamesSenshi/constant-values#readme"
+	"name": "@gamesenshi/constant-values",
+	"version": "1.0.0",
+	"description": "constant values for game senshi project",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/GamesSenshi/constant-values.git"
+	},
+	"keywords": [
+		"game",
+		"senshi",
+		"constant"
+	],
+	"author": "Game Senshi",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/GamesSenshi/constant-values/issues"
+	},
+	"homepage": "https://github.com/GamesSenshi/constant-values#readme",
+	"dependencies": {},
+	"devDependencies": {
+		"@babel/cli": "^7.6.0",
+		"@babel/core": "^7.6.0",
+		"@babel/preset-env": "^7.6.0",
+		"babel-plugin-module-resolver": "^3.2.0",
+		"eslint": "^6.4.0",
+		"eslint-config-prettier": "^6.3.0",
+		"eslint-plugin-prettier": "^3.1.1",
+		"husky": "^4.0.0-beta.1",
+		"prettier": "^1.18.2",
+		"pretty-quick": "^1.11.1"
+	},
+	"babel": {
+		"presets": [
+			"@babel/preset-env"
+		],
+		"plugins": [
+			[
+				"module-resolver",
+				{
+					"root": [
+						"./src"
+					]
+				}
+			]
+		]
+	},
+	"prettier": {
+		"eslintIntegration": true,
+		"singleQuote": true,
+		"jsxSingleQuote": true,
+		"trailingComma": "es5",
+		"semi": false,
+		"jsxBracketSameLine": true,
+		"useTabs": true
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "pretty-quick --staged"
+		}
+	},
+	"eslintConfig": {
+		"parserOptions": {
+			"ecmaVersion": 2017
+		},
+		"plugins": [
+			"promise"
+		],
+		"settings": {
+			"import/resolver": {
+				"node": {
+					"moduleDirectory": [
+						"node_modules",
+						"src/"
+					]
+				}
+			}
+		},
+		"extends": [
+			"eslint:recommended",
+			"plugin:prettier/recommended"
+		],
+		"rules": {
+			"no-console": "off",
+			"no-unused-vars": 1
+		}
+	}
 }

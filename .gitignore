@@ -1,0 +1,15 @@
+# dependencies
+/node_modules
+
+# environments
+/.config/dev.env
+/.config/prod.env
+
+# build
+/dist
+
+# cache
+.cache
+
+# misc
+test.js
