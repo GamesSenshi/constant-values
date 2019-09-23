@@ -1,0 +1,24 @@
+{
+  "name": "@gamesenshi/constant-values",
+  "version": "1.0.0",
+  "description": "constant values for game senshi project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GamesSenshi/constant-values.git"
+  },
+  "keywords": [
+    "game",
+    "senshi",
+    "constant"
+  ],
+  "author": "Game Senshi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GamesSenshi/constant-values/issues"
+  },
+  "homepage": "https://github.com/GamesSenshi/constant-values#readme"
+}
